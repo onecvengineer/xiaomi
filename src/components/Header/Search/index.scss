@@ -1,0 +1,24 @@
+.search {
+  float: right;
+  width: 296px;
+  margin-top: 25px;
+  border: 1px solid #e0e0e0;
+  #search-input {
+    width: 240px;
+    height: 48px;
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 48px;
+
+    transition: all 0.2s;
+  }
+  .search-btn {
+    width: 52px;
+    height: 50px;
+    color: #616161;
+    background: #fff;
+  }
+  &:hover {
+    border-color: #b0b0b0;
+  }
+}

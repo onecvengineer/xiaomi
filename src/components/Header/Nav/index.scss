@@ -1,0 +1,26 @@
+.header-nav {
+  margin-left: 40px;
+  display: inline-block;
+  .nav-list {
+    position: relative;
+    z-index: 10;
+    height: 88px;
+    margin: 0;
+    padding: 12px 0 0 30px;
+    font-size: 16px;
+    .nav-item {
+      float: left;
+      a {
+        display: block;
+        padding: 26px 20px 38px;
+        transition: color 0.2s;
+        &:hover {
+          color: #ff6700;
+        }
+      }
+    }
+    &:hover + .nav-menu {
+      height: 229px;
+    }
+  }
+}

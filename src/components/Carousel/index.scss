@@ -1,0 +1,68 @@
+.carousel {
+  background-color: #fff;
+  .car-wrap {
+    position: relative;
+    height: 510px;
+  }
+  .img-wrap {
+    .car-img {
+      display: none;
+      position: absolute;
+      top: 10px;
+      left: 0;
+      img {
+        width: 100%;
+      }
+    }
+    .current {
+      display: block;
+    }
+  }
+  .pagination-wrap {
+    position: absolute;
+    width: 400px;
+    left: auto;
+    right: 30px;
+    bottom: 35px;
+    text-align: right;
+    .car-pagination {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin: 0 4px;
+      border: 2px solid #fff;
+      border-color: hsla(0, 0%, 100%, 0.3);
+      border-radius: 10px;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.4);
+      opacity: 1;
+      &.active {
+        background: hsla(0, 0%, 100%, 0.4);
+        border-color: rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+
+  .car-btn {
+    position: absolute;
+    top: 50%;
+    width: 41px;
+    height: 69px;
+    margin-top: -35px;
+    &.pre {
+      left: 0;
+      background: url(//i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png) no-repeat -84px 50%;
+      right: auto;
+      &:hover {
+        background-position: 0 50%;
+      }
+    }
+    &.next {
+      right: 0;
+      background: url(//i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png) no-repeat -125px 50%;
+      &:hover {
+        background-position: -42px 50%;
+      }
+    }
+  }
+}

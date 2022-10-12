@@ -1,0 +1,18 @@
+.logo {
+  float: left;
+
+  margin-top: 22px;
+  .logo-link {
+    position: relative;
+    display: block;
+    width: 56px;
+    height: 56px;
+    overflow: hidden;
+    background: url(//s02.mifile.cn/assets/static/image/logo-mi2.png) no-repeat;
+    background-size: 56px;
+    transform: translateZ(0);
+    &:hover {
+      color: #ff6700;
+    }
+  }
+}

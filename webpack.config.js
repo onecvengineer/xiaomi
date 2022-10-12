@@ -1,6 +1,5 @@
 const { resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CssMiniExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'development',
@@ -16,7 +15,9 @@ module.exports = {
   devServer: {
     static: './dist',
     open: true,
+    hot: true,
   },
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -68,15 +69,19 @@ module.exports = {
         },
       },
       {
-        test: /\.tpl/,
-        loader: 'ejs-loader',
+        test: /\.tpl$/,
+        use: [
+          {
+            loader: 'ejs-loader',
+            options: {
+              esModule: false,
+            },
+          },
+        ],
       },
     ],
   },
   plugins: [
-    new CssMiniExtractPlugin({
-      filename: 'css/[name].[contenthash].css',
-    }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/pages/index.html',
@@ -104,5 +109,10 @@ module.exports = {
         },
       },
     },
+  },
+
+  externalsType: 'script',
+  externals: {
+    jquery: ['https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js', '$', 'jQuery'],
   },
 };
