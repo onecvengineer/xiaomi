@@ -1,0 +1,42 @@
+.tab {
+  margin-top: 20px;
+  background-color: #fff;
+  .tab-wrap {
+    padding: 10px;
+    height: 84px;
+    font-size: 14px;
+    .class {
+      height: 30px;
+      line-height: 30px;
+      span {
+        float: left;
+      }
+      .tab-item {
+        float: left;
+        width: 100px;
+        text-align: center;
+
+        &.current a {
+          color: #ff6700;
+        }
+      }
+    }
+    .tab-search {
+      margin: 10px 0 0;
+      height: 24px;
+      line-height: 24px;
+
+      input {
+        margin-left: 30px;
+        height: 32px;
+        width: 200px;
+        border: 1px solid #e0e0e0;
+        transition: all 0.2s;
+
+        &:hover {
+          border-color: #b0b0b0;
+        }
+      }
+    }
+  }
+}

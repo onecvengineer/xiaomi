@@ -13,13 +13,12 @@ class Nav {
 
   tpl(data) {
     let list = '';
-    data.forEach(
-      item =>
-        (list += tplReplace(navItemTpl, {
-          series: item.series_name,
-          field: item.field,
-        }))
-    );
+    data.forEach(item => {
+      list += tplReplace(navItemTpl, {
+        series: item.series_name,
+        field: item.field,
+      });
+    });
     return tplReplace(navTpl, {
       navItem: list,
       navMenu: this.navMenu.tpl(),
@@ -41,6 +40,7 @@ class Nav {
       const currentPhoneData = phoneData.filter(value => field === value.field);
       currentPhoneData.forEach(item => {
         list += tplReplace(nav.navMenu.itemTpl, {
+          id: item.id,
           pic: JSON.parse(item.pics)[0][0][0],
           phone_name: item.phone_name,
           default_price: item.default_price,

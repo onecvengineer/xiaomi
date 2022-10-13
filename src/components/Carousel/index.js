@@ -86,8 +86,8 @@ class Carousel {
   }
 
   changeItem(oldIdx, newIdx) {
-    this.$carImg.eq(oldIdx).fadeOut(800);
-    this.$carImg.eq(newIdx).fadeIn(800);
+    this.$carImg.eq(oldIdx).fadeOut('slow');
+    this.$carImg.eq(newIdx).fadeIn('slow');
 
     this.$carPagination.eq(newIdx).addClass('active');
     this.$carPagination.eq(oldIdx).removeClass('active');

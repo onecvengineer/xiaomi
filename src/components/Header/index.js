@@ -19,7 +19,6 @@ class Header {
   }
 
   async init() {
-    let pic = this.phoneData[0].pics;
     await this.render();
     this.bindEvent();
   }

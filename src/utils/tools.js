@@ -22,7 +22,7 @@ export function debounce(fn, delay = 500) {
 }
 
 export function getUrlQueryValue(key) {
-  const reg = new RegExp('(^|&)' + key + '=([^&]*)(&|$)', 'i');
+  const reg = new RegExp('(/?|&)' + key + '=([^&]*)(&|$)', 'i');
   const value = window.location.search.match(reg);
   return value ? decodeURIComponent(value[2]) : null;
 }

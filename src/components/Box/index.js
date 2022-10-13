@@ -1,32 +1,36 @@
 import tpl from './tpl/index.tpl';
 import itemTpl from './tpl/item.tpl';
+import titleTpl from './tpl/title.tpl';
 import './index.scss';
 import { tplReplace } from '../../utils/tools';
+import NoDataTip from '../no_data_tip';
 
 class Box {
-  constructor(el, title, data) {
+  constructor(el, data, title) {
     this.name = 'Box';
     this.$el = el;
     this.title = title;
     this.data = data;
-
-    this.init();
   }
 
-  init() {
-    this.render();
+  async init() {
+    await this.render();
   }
-  render() {
+  async render() {
+    let boxTitle = '';
+    if (this.title) {
+      boxTitle = tplReplace(titleTpl, { title: this.title });
+    }
     const el = tplReplace(tpl, {
-      title: this.title,
-      boxItem: this.getList(),
+      boxTitle,
+      boxItem: this.getList(this.data) || new NoDataTip().tpl(),
     });
     this.$el.append(el);
   }
 
-  getList() {
+  getList(data) {
     let list = '';
-    this.data.forEach((item, idx) => {
+    data.forEach((item, idx) => {
       list += tplReplace(itemTpl, {
         isFirst: idx % 5 === 0 ? 'first' : '',
         id: item.id,
