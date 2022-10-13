@@ -3,7 +3,7 @@ import Box from '../components/Box';
 import Carousel from '../components/Carousel';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import { getUrlQueryValue } from '../utils/tools';
+
 import App from './App';
 
 class Index extends App {
@@ -22,7 +22,6 @@ class Index extends App {
     new Box(this.$el, this.filterData('most_value'), '超值商品').init();
     new Box(this.$el, this.filterData('recom'), '官方推荐').init();
     new Footer(this.$el);
-    // new Box(this.$el)
     $('body').prepend(this.$el);
   }
 

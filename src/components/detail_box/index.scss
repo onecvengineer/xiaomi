@@ -1,0 +1,61 @@
+.detail-box {
+  margin-top: 20px;
+  background-color: #fff;
+
+  .detail-box-wrap {
+    display: flex;
+    .img {
+      width: 560px;
+      img {
+        width: 100%;
+      }
+    }
+
+    .phone-info {
+      flex: 1;
+      padding-top: 60px;
+      margin-left: 20px;
+      .title {
+        font-size: 24px;
+        font-weight: 400;
+        color: #212121;
+      }
+      .desc {
+        font-size: 14px;
+        color: #999;
+        padding-top: 15px;
+        line-height: 1.5;
+      }
+      .price {
+        margin-top: 10px;
+        font-size: 18px;
+        color: #ff6700;
+      }
+      .option {
+        margin-top: 15px;
+        .op-name {
+          font-size: 18px;
+        }
+        .op-item {
+          float: left;
+          width: 292px;
+          height: 42px;
+          margin-right: 12px;
+          margin-top: 10px;
+          line-height: 42px;
+          font-size: 16px;
+          text-align: center;
+          border: 1px solid #e0e0e0;
+          cursor: pointer;
+          transition: all 0.2s ease;
+
+          &.current,
+          &:hover {
+            border: 1px solid #ff6700;
+            color: #ff6700;
+          }
+        }
+      }
+    }
+  }
+}
