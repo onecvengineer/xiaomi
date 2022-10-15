@@ -15,6 +15,7 @@
         <h3 class="op-name">颜色选择</h3>
         {{color}}
       </div>
+      {{btnGroup}}
     </div>
   </div>
 </section>

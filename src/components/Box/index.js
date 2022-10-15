@@ -23,7 +23,7 @@ class Box {
     }
     const el = tplReplace(tpl, {
       boxTitle,
-      boxItem: this.getList(this.data) || new NoDataTip().tpl(),
+      boxItem: this.getList(this.data) || new NoDataTip().tpl('没有相关数据'),
     });
     this.$el.append(el);
   }

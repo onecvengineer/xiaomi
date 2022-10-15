@@ -34,7 +34,6 @@ class Nav {
 
     let list = '';
     if (nav.cache[field]) {
-      console.log('cache');
       list = nav.cache[field];
     } else {
       const currentPhoneData = phoneData.filter(value => field === value.field);
@@ -46,6 +45,7 @@ class Nav {
           default_price: item.default_price,
         });
       });
+
       nav.cache[field] = list;
     }
 

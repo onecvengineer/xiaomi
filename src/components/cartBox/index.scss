@@ -1,0 +1,119 @@
+.cart-list {
+  margin-top: 20px;
+  background-color: #fff;
+  .list-hd {
+    height: 70px;
+    line-height: 70px;
+    padding-right: 26px;
+    color: #424242;
+    font-size: 14px;
+    text-align: center;
+    .list-hd-item {
+      float: left;
+      width: 160px;
+
+      &.name {
+        width: 220px;
+      }
+    }
+  }
+  .list-bd {
+    .cart-item {
+      padding: 15px 26px 15px 0;
+      border-top: 1px solid #e0e0e0;
+      .col {
+        display: table-cell;
+        vertical-align: middle;
+        width: 160px;
+        text-align: center;
+        color: #424242;
+        font-size: 16px;
+        &.img {
+          overflow: hidden;
+          img {
+            display: block;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+          }
+        }
+        &.name {
+          width: 220px;
+          font-size: 18px;
+        }
+        &.price {
+          color: #ff6770;
+        }
+        .delete {
+          width: 80px;
+          height: 40px;
+          color: #fff;
+          background-color: #f56c6c;
+          border-color: #f56c6c;
+          border-radius: 4px;
+          &:hover {
+            background: #f78989;
+            border-color: #f78989;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cart-footer {
+  height: 50px;
+  margin-top: 20px;
+  text-align: right;
+  background-color: #fff;
+  transition: background 0.3s ease, top 0.3s ease;
+
+  .left {
+    float: left;
+    font-size: 14px;
+    .lk-to-index {
+      line-height: 50px;
+      margin-left: 32px;
+    }
+    .cart-total {
+      margin-left: 16px;
+      padding-left: 16px;
+      border-left: 1px solid #eee;
+      color: #757575;
+      .total-num {
+        color: #ff6770;
+        font-style: normal;
+      }
+    }
+  }
+  .right {
+    float: right;
+    padding-left: 13px;
+    color: #ff6700;
+    .cart-price {
+      .total-price {
+        font-style: normal;
+        font-size: 30px;
+      }
+    }
+    .btn {
+      width: 200px;
+      height: 48px;
+      line-height: 48px;
+      font-size: 18px;
+      margin-left: 50px;
+      text-align: center;
+      background: #ff6700;
+      border-color: #ff6700;
+      color: #fff;
+      transition: all 0.3s;
+      &:disabled {
+        cursor: not-allowed;
+        background: #e0e0e0;
+        border-color: #e0e0e0;
+        color: #b0b0b0;
+      }
+    }
+  }
+}

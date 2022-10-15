@@ -27,14 +27,7 @@ class Detail extends App {
   }
 
   getPhoneInfo() {
-    let info = '';
-    this.cache.phone_data.forEach(item => {
-      if (item.id === this.id) {
-        info = item;
-      }
-    });
-
-    return info;
+    return this.cache.phone_data.filter(item => item.id === this.id)[0];
   }
 }
 

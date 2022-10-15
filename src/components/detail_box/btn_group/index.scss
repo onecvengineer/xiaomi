@@ -1,0 +1,18 @@
+.btn-group {
+  float: right;
+  padding: 30px 20px 0;
+  button {
+    width: 160px;
+    height: 44px;
+    margin-left: 10px;
+    background-color: #ff6700;
+    font-size: 16px;
+    color: #fff;
+    &:hover {
+      background-color: #f25807;
+    }
+  }
+  .purchase {
+    background-color: #f20;
+  }
+}

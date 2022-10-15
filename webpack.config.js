@@ -7,6 +7,8 @@ module.exports = {
     index: './src/js/Index.js',
     list: './src/js/List.js',
     detail: './src/js/Detail.js',
+    cart: './src/js/Cart.js',
+    order: './src/js/Order.js',
   },
   output: {
     filename: 'js/[name].js',
@@ -96,6 +98,16 @@ module.exports = {
       filename: 'detail.html',
       template: './src/pages/detail.html',
       chunks: ['detail'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'cart.html',
+      template: './src/pages/cart.html',
+      chunks: ['cart'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'order.html',
+      template: './src/pages/order.html',
+      chunks: ['order'],
     }),
   ],
   optimization: {

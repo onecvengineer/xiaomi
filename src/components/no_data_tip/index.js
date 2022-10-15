@@ -1,10 +1,14 @@
 import tpl from './index.tpl';
 import './index.scss';
+import { tplReplace } from '../../utils/tools';
 
 class NoDataTip {
   constructor() {
     this.name = 'NoDataTip';
-    this.tpl = tpl;
+  }
+
+  tpl(text) {
+    return tplReplace(tpl, { text });
   }
 }
 
